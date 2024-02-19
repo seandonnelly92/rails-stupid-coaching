@@ -1,6 +1,8 @@
-<h1>Our first view</h1>
+<h1 class= "p-3">Question</h1>
 
-<form action="/answer" data-turbo="false">
-  <input type="text" name="???">
-  <input type="submit" value="Ask!">
-</form>
+<div class="col-6 d-flex justify-content-center px-3">
+  <form action="/answer" method="get" data-turbo="false" class="input-group">
+    <input type="text" name="userInput" class="form-control">
+    <input type="submit" value="Ask!" class="btn btn-primary">
+  </form>
+</div>

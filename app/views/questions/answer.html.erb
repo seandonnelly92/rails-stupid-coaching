@@ -1,1 +1,23 @@
-<h1>I am the answer view</h1>
+<h1 class= "p-3">Answer</h1>
+<div id="container" class=""></div>
+<div class="px-3">
+<p>The user input: <%= params[:userInput] %></p>
+
+<% if params[:userInput] === "I am going to work" %>
+  <div>
+  <div id="userQuestion" class="alert alert-secondary"><%= params[:userInput] %><br><em>- You</em></div>
+  <div id="coachAnswer" class="alert alert-info"><%= answer = "Great" %><br><em>- Your Coach</em></div>
+
+  <% elsif params[:userInput].include?("?")%>
+  <div id="userQuestion" class="alert alert-secondary"><%= params[:userInput] %><br><em>- You</em></div>
+  <div id="coachAnswer" class="alert alert-info"><%= answer = "Silly question, get dressed and go to work!" %><br><em>- Your Coach</em></div>
+
+  <% else %>
+  <div id="userQuestion" class="alert alert-secondary"><%= params[:userInput] %><br><em>- You</em></div>
+  <div id="coachAnswer" class="alert alert-info"><%= answer = "I don't care, get dressed and go to work!" %><br><em>- Your Coach</em></div>
+<% end %>
+
+<p class="py-3"> <%= link_to "Ask another question", ask_path %> </p>
+</div>
+
+<%  %>
